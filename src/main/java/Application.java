@@ -12,8 +12,12 @@ public class Application {
 		
 		CustomerService service = appContext.getBean("customerService",CustomerService.class);
 		
-		System.out.println(service.findAll().get(0).getFirstName()+" "+
-				service.findAll().get(0).getLastName());
+		try {
+			service.findAll(false,2);
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+		
 	}
 
 }

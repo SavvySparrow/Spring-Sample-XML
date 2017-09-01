@@ -6,6 +6,7 @@ import com.sahiljalan.model.Customer;
 
 public interface CustomerService {
 
-	public abstract List<Customer> findAll();
+	public abstract List<Customer> findAll(boolean val,Integer noOfRows) throws Exception;
+	public abstract List<Customer> findAll(boolean val);
 
 }
